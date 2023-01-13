@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		25F252BD29714CEE00D95219 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F252BC29714CEE00D95219 /* AppDelegate.swift */; };
 		25F252BF29714CEE00D95219 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F252BE29714CEE00D95219 /* SceneDelegate.swift */; };
-		25F252C129714CEE00D95219 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F252C029714CEE00D95219 /* ViewController.swift */; };
-		25F252C429714CEE00D95219 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F252C229714CEE00D95219 /* Main.storyboard */; };
+		25F252C129714CEE00D95219 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F252C029714CEE00D95219 /* MoviesViewController.swift */; };
+		25F252C429714CEE00D95219 /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F252C229714CEE00D95219 /* Movies.storyboard */; };
 		25F252C629714CF200D95219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25F252C529714CF200D95219 /* Assets.xcassets */; };
 		25F252C929714CF200D95219 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25F252C729714CF200D95219 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +19,8 @@
 		25F252B929714CEE00D95219 /* Saxlshi Lecture18.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Saxlshi Lecture18.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25F252BC29714CEE00D95219 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25F252BE29714CEE00D95219 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		25F252C029714CEE00D95219 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		25F252C329714CEE00D95219 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25F252C029714CEE00D95219 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		25F252C329714CEE00D95219 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Movies.storyboard; sourceTree = "<group>"; };
 		25F252C529714CF200D95219 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25F252C829714CF200D95219 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25F252CA29714CF200D95219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +56,63 @@
 		25F252BB29714CEE00D95219 /* Saxlshi Lecture18 */ = {
 			isa = PBXGroup;
 			children = (
-				25F252BC29714CEE00D95219 /* AppDelegate.swift */,
-				25F252BE29714CEE00D95219 /* SceneDelegate.swift */,
-				25F252C029714CEE00D95219 /* ViewController.swift */,
-				25F252C229714CEE00D95219 /* Main.storyboard */,
-				25F252C529714CF200D95219 /* Assets.xcassets */,
-				25F252C729714CF200D95219 /* LaunchScreen.storyboard */,
-				25F252CA29714CF200D95219 /* Info.plist */,
+				25F252D029714F5800D95219 /* App */,
+				25F252D329714F9100D95219 /* Scenes */,
+				25F252D129714F7F00D95219 /* Resources */,
+				25F252D229714F8800D95219 /* SupportingFiles */,
 			);
 			path = "Saxlshi Lecture18";
+			sourceTree = "<group>";
+		};
+		25F252D029714F5800D95219 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				25F252BC29714CEE00D95219 /* AppDelegate.swift */,
+				25F252BE29714CEE00D95219 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		25F252D129714F7F00D95219 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25F252C529714CF200D95219 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25F252D229714F8800D95219 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				25F252CA29714CF200D95219 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		25F252D329714F9100D95219 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				25F252D429714F9C00D95219 /* Launch */,
+				25F252D529714FF800D95219 /* Movies */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		25F252D429714F9C00D95219 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				25F252C729714CF200D95219 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		25F252D529714FF800D95219 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				25F252C029714CEE00D95219 /* MoviesViewController.swift */,
+				25F252C229714CEE00D95219 /* Movies.storyboard */,
+			);
+			path = Movies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +175,7 @@
 			files = (
 				25F252C929714CF200D95219 /* LaunchScreen.storyboard in Resources */,
 				25F252C629714CF200D95219 /* Assets.xcassets in Resources */,
-				25F252C429714CEE00D95219 /* Main.storyboard in Resources */,
+				25F252C429714CEE00D95219 /* Movies.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25F252C129714CEE00D95219 /* ViewController.swift in Sources */,
+				25F252C129714CEE00D95219 /* MoviesViewController.swift in Sources */,
 				25F252BD29714CEE00D95219 /* AppDelegate.swift in Sources */,
 				25F252BF29714CEE00D95219 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,12 +195,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		25F252C229714CEE00D95219 /* Main.storyboard */ = {
+		25F252C229714CEE00D95219 /* Movies.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				25F252C329714CEE00D95219 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Movies.storyboard;
 			sourceTree = "<group>";
 		};
 		25F252C729714CF200D95219 /* LaunchScreen.storyboard */ = {
@@ -288,10 +336,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Saxlshi Lecture18/Info.plist";
+				INFOPLIST_FILE = "Saxlshi Lecture18/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Movies;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,10 +363,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Saxlshi Lecture18/Info.plist";
+				INFOPLIST_FILE = "Saxlshi Lecture18/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Movies;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
