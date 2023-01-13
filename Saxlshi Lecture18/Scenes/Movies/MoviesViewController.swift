@@ -8,10 +8,26 @@
 import UIKit
 
 class MoviesViewController: UIViewController {
+    
+    var movieApiManager: MovieAPIManagerProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        fetchMovies()
+    }
+    
+    func fetchMovies() {
+        movieApiManager = MovieAPIManager()
+        
+        movieApiManager?.fetchMoview(with: .popular, completion: { result in
+            switch result {
+            case .success(let movieResponse):
+                print(movieResponse.movies)
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 
 
