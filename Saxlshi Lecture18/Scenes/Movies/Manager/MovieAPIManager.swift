@@ -9,7 +9,6 @@ import Foundation
 
 /*
  https://api.themoviedb.org/3/movie/upcoming?api_key=b05b465c55ad91f6a57956826ab95df9
-                                             api_key=b05b465c55ad91f6a57956826ab95df9
  https://api.themoviedb.org/3/movie/top_rated?api_key=b05b465c55ad91f6a57956826ab95df9
  https://api.themoviedb.org/3/movie/popular?api_key=b05b465c55ad91f6a57956826ab95df9
  
