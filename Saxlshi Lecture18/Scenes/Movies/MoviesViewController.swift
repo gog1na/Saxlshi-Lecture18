@@ -86,9 +86,27 @@ class MoviesViewController: UIViewController {
 extension MoviesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        3
+        MovieCategory.allCases.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let category = MovieCategory(rawValue: indexPath.row) else  {return UITableViewCell()}
+        
+        switch category {
+        case .upcoming:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UpcomingTableViewCell", for: indexPath) as! UpcomingTableViewCell
+            cell.movies = upcomingMovies
+            return cell
+        case .topRated:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TopRatedTableViewCell", for: indexPath) as! TopRatedTableViewCell
+            cell.movies = topRatedMovies
+            return cell
+        case .popular:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PopularTableViewCell", for: indexPath) as! PopularTableViewCell
+            cell.movies = popularMovies
+            return cell
+        }
+        
+        /*
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UpcomingTableViewCell", for: indexPath) as! UpcomingTableViewCell
             cell.movies = upcomingMovies
@@ -101,6 +119,7 @@ extension MoviesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PopularTableViewCell", for: indexPath) as! PopularTableViewCell
         cell.movies = popularMovies
         return cell
+        */
     }
 }
 

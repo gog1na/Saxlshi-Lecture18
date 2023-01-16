@@ -15,7 +15,7 @@ import Foundation
  https://api.themoviedb.org/3/movie/550?api_key=b05b465c55ad91f6a57956826ab95df9
  */
 
-enum MovieCategory: Int {
+enum MovieCategory: Int, CaseIterable {
     case upcoming = 0
     case topRated
     case popular
